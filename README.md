@@ -1,4 +1,4 @@
-# AI Red Teaming Lab — BSides Querétaro 2026
+# AI Red Teaming Lab
 
 Laboratorio web interactivo, determinista y sin dependencias externas para demostrar prompt injection, RAG poisoning, exceso de agencia y evaluación automatizada.
 
