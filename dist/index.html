@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <title>AI Red Teaming Lab — BSides Querétaro 2026</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="topbar">
+    <button class="brand" data-action="home" aria-label="Ir al dashboard">
+      <span class="brand-mark">AI</span><span><b>RED TEAMING LAB</b><small>BSides Querétaro 2026</small></span>
+    </button>
+    <div class="global-actions">
+      <div class="mode-switch" role="group" aria-label="Modo de ejecución">
+        <button class="active" data-mode="sim">SIMULATED</button><button data-mode="live">LIVE LLM</button>
+      </div>
+      <button class="icon-btn" data-action="present" title="Modo presentador">◉ <span>Presentar</span></button>
+      <button class="icon-btn" data-action="fullscreen" title="Pantalla completa">⛶</button>
+      <button class="icon-btn" data-action="reset-all" title="Reiniciar laboratorio">↻</button>
+    </div>
+  </header>
+
+  <main id="app" aria-live="polite"></main>
+
+  <aside id="presenter" class="presenter hidden" aria-label="Controles de presentación">
+    <div><span class="live-dot"></span> PRESENTATION MODE <b id="timer">00:00</b></div>
+    <div class="step-copy"><small id="step-count">PASO 1 / 7</small><strong id="step-title">Chatbot normal</strong></div>
+    <div class="presenter-actions"><button data-action="prev-step">←</button><button class="primary" data-action="next-step">NEXT STEP →</button><button data-action="pause">Ⅱ</button><button data-action="exit-present">×</button></div>
+  </aside>
+
+  <div id="toast" class="toast" role="status"></div>
+  <script src="data.js"></script>
+  <script src="engine.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
